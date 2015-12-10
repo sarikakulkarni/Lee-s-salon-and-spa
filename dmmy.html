@@ -9,14 +9,14 @@
 
 </head>
 
-<body> 
+<body class="gallery"> 
 	<div class="header">
     <div id="logo"></div>
 		<div class="logo container">
 	          <h1> Lee's </h1>
             <h2> Salon and Spa </h2>
-	           <div class="nav flex space-between" id='navliele'> 	
-	           <a href="index.html"> Home </a>
+	           <div class="nav flex space-between"> 	
+	           	<a href="index.html"> Home </a>
               
                <li><a href="gallery.html">Gallery</a>
                   <ul>
@@ -56,54 +56,82 @@
     </div>
 </div>
 
-<div class="Background"><img src="styles/images/background.jpg" alt="Background View"></div> 
+
+<div class="Background_content">
+  <img src="styles/images/background.jpg" alt="Background View">
+<div class="main_content">
+
+
+
+
+
+<script>
+$(document).ready(function() {
+  $('.popup-with-form').magnificPopup({
+    type: 'inline',
+    preloader: false,
+    focus: '#name',
+
+    // When elemened is focused, some mobile browsers in some cases zoom in
+    // It looks not nice, so we disable it:
+    callbacks: {
+      beforeOpen: function() {
+        if($(window).width() < 700) {
+          this.st.focus = false;
+        } else {
+          this.st.focus = '#name';
+        }
+      }
+    }
+  });
+});
+</script>
+
 
 
 <div>
-<p class="schedule"><a href="ADD LINK" class="center">Schedue an Appointment</a></p>
+<a class="popup-with-form" href="#test-form">Open form</a>
+
+<!-- form itself -->
+<form id="test-form" class="white-popup-block mfp-hide">
+  <h1>Form</h1>
+  <fieldset style="border:0;">
+    <p>Lightbox has  <code>ajax</code> (to keep entered data if the ).</p>
+    <ol>
+      <li>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Name" required="">
+      </li>
+      <li>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="example@domain.com" required="">
+      </li>
+      <li>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" placeholder="Eg. +447500000000" required="">
+      </li>
+      <li>
+        <label for="textarea">Textarea</label><br>
+        <textarea id="textarea">Try to resize me to see how popup CSS-based resizing works.</textarea>
+      </li>
+    </ol>
+  </fieldset>
+</form>
+
 </div>
 
-<div class="circular container space-between flex">
-<div class="circular"><img src="styles/images/skin.jpg" alt="skin"></div>
 
-<div class="circular"><img src="styles/images/hair.jpg" alt="hair"></div>
 
-<div class="circular"><img src="styles/images/spa.jpg" alt="spa"></div>
 
-<div class="circular"><img src="styles/images/nail.jpg" alt="nail"></div>
+
+
+
+
+
+
 </div>
 
 
-   <div class="body">
-    <div class="hero container">
-    </div>
-
-    <div class="article container space-between flex">
-        <div class="flex-child">
-          <a href="#">SKIN</a>
-        </div>
-
-        <div class="flex-child">
-          <a href="#">HAIR</h3>          
-        </div>
-
-        <div class="flex-child">
-          <a href="#">SPA</h3>
-        </div>
-
-        <div class="flex-child">
-          <a href="#">NAIL</h3>            
-        </div>
-      </div>
-    </div>
-
-<div> <p class="services"><a href="ADD LINK" class="Below">More Services</a></p>
-</div>
-
-<div class="timings"> <p><a>TIMINGS</a></p>
-  <p><a>MON to SUN</a></p>
-  <p><a>9am - 8pm</a></p>
-</div>
 
 
 </body>
