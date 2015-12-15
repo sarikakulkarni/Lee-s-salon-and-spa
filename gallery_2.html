@@ -1,0 +1,151 @@
+<!doctype html>
+
+<html>
+<head>
+  
+<title> Lee's salon and Spa </title>
+  
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+</head>
+
+<body class="gallery"> 
+	<div class="header">
+    <div id="logo"></div>
+		<div class="logo container">
+	          <h1> Lee's </h1>
+            <h2> Salon and Spa </h2>
+	           <div class="nav flex space-between"> 	
+	           	<a href="index.html"> Home </a>
+              
+               <li><a href="gallery.html">Gallery</a>
+                  <ul>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="inside Salon.html">Inside Salon</a></li>
+                    <li><a href="bridal gallery.html">Bridal</a></li>
+                  </ul>
+               </li>
+
+               <li><a href="services.html"> Services </a>
+                  <ul>
+                    <li><a href="skin.html">Skin</a></li>
+                    <li><a href="hair.html">Hair</a></li>
+                    <li><a href="spa.html">Spa</a></li>
+                    <li><a href="nail.html">Nail</a></li>
+                    <li><a href="make up.html">Make Up</a></li>
+                    <li><a href="bridal.html">Bridal</a></li>
+                    <li><a href="wax.html">Wax</a></li>
+                  </ul>
+               </li>
+              
+              <a href="blog.html"> Blog </a>
+
+              <li><a href="team.html"> Team </a>
+                <ul>
+                  <li><a href="beautician.html">Beautician</a></li>
+                  <li><a href="hair Stylist.html">Hair Stylist</a></li>
+                  <li><a href="make Up Artist.html">Make Up Artist</a></li>
+                  <li><a href="colorist.html">Colorist</a></li>
+                  <li><a href="artist.html">Artist</a></li>
+                 </ul>
+               </li>
+
+              <a href="contact.html">Contact</a>
+              <a href="sign up.html">Sign Up/Log In</a>
+        </div>
+    </div>
+</div>
+
+<div class="Background_content">
+  <img src="styles/images/background.jpg" alt="Background View">
+
+  <div class="mtlsr-images-for-lightbox">
+    <ul>
+      <li>
+        <a href="http://www.marcelotorresweb.com/labs/mtlsr-lightbox/images/medium/chrysanthemum.jpg">
+          <img src="http://www.marcelotorresweb.com/labs/mtlsr-lightbox/images/thumbnail/chrysanthemum.jpg" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="http://www.marcelotorresweb.com/labs/mtlsr-lightbox/images/medium/desert.jpg">
+          <img src="http://www.marcelotorresweb.com/labs/mtlsr-lightbox/images/thumbnail/desert.jpg" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="http://www.marcelotorresweb.com/labs/mtlsr-lightbox/images/medium/hydrangeas.jpg">
+          <img src="http://www.marcelotorresweb.com/labs/mtlsr-lightbox/images/thumbnail/hydrangeas.jpg" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="http://www.marcelotorresweb.com/labs/mtlsr-lightbox/images/medium/lighthouse.jpg">
+          <img src="http://www.marcelotorresweb.com/labs/mtlsr-lightbox/images/thumbnail/lighthouse.jpg" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="http://www.marcelotorresweb.com/labs/mtlsr-lightbox/images/medium/penguins.jpg">
+          <img src="http://www.marcelotorresweb.com/labs/mtlsr-lightbox/images/thumbnail/penguins.jpg" alt="" />
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="mtlsr-lightbox">
+    <a href="#" class="close">&#9421;</a>
+    <a href="#" class="prev">&lsaquo;</a>
+    <a href="#" class="next">&rsaquo;</a>
+  </div>  
+
+<script>
+// Create a lightbox
+
+var $lightbox = $("<div class='lightbox'></div>");
+var $img = $("<img>");
+var $caption = $("<p class='caption'></p>");
+
+
+// Add image and caption to lightbox
+
+$lightbox
+  .append($img)
+  .append($caption);
+
+// Add lighbox to document
+
+$('body').append($lightbox);
+
+
+$('.gallery li').click(function (e) {
+  e.preventDefault();
+
+  // Get image link and description
+  var src = $(this).children('img').attr("src");
+  var cap = $(this).children('img').attr("alt");
+
+  // Add data to lighbox
+
+  $img.attr('src',src);
+  $caption.text(cap);
+
+  // $lightbox.append('<img src="' + src + '"></img><p class="caption">' + caption + '</p>');
+
+  // Show lightbox
+
+  $lightbox.show();
+
+  $lightbox.click(function () {
+    $lightbox.hide();
+  });
+});
+</script>
+
+</div>
+
+</body>
+
+<footer>
+ </div>
+   <div class="footer">
+   </div>
+
+</footer>
+
+</html>
